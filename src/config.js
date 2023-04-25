@@ -5,17 +5,17 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
+const namePrefix = "HoodieBirds";
+const description = "A collection of 10,000 birds rocking hoodies";
 const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
-  symbol: "YC",
-  seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.youtube.com/c/hashlipsnft",
+  symbol: "HOODIEBIRD",
+  seller_fee_basis_points: 500, // Define how much % you want from secondary market sales 1000 = 10%
+  external_url: "https://www.hoodiebirds.com",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: "BNfYe5PEep7WAiAJa4KwqpAbhyUfifaCVMB4xvavDY75",
       share: 100,
     },
   ],
@@ -27,12 +27,11 @@ const layerConfigurations = [
     growEditionSizeTo: 5,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Body" },
+      { name: "Beak" },
+      { name: "Eyes" },
+      { name: "Eyewear" },
+      { name: "Outerwear" },
     ],
   },
 ];
@@ -42,8 +41,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 840,
+  height: 840,
   smoothing: false,
 };
 
@@ -85,8 +84,8 @@ const rarityDelimiter = "#";
 const uniqueDnaTorrance = 10000;
 
 const preview = {
-  thumbPerRow: 5,
-  thumbWidth: 50,
+  thumbPerRow: 20,
+  thumbWidth: 42,
   imageRatio: format.height / format.width,
   imageName: "preview.png",
 };
